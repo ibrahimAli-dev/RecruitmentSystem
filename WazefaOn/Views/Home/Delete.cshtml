@@ -1,0 +1,56 @@
+﻿@model WazefaOn.Models.ApplyForJob
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Do you continue to delete </h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.job.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job.JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.UserType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.UserType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            Apply Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplyDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Return to Jobs Page", "Index")
+        </div>
+    }
+</div>

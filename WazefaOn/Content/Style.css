@@ -1,0 +1,87 @@
+﻿@font-face {
+    font-family:font-one;
+    src:url('')
+}
+
+body {
+padding-top:100px;
+padding-bottom:100px;
+align-content:right;
+}
+
+.navbar-default {
+    background-color: #4e0d0d ;
+    border-color: #e7e7e7;   
+}
+.nav>li {
+    position: relative;
+    display: block;
+    height: 75px;
+    padding-top:10px;
+
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #eee;
+}
+
+.navbar-default .navbar-nav>li>a :hover{
+    color: #808080;
+}
+
+.myfooter {
+    background-color:#c67272;
+    padding-top:px;
+    text-align:justify;
+    margin-top:400px;
+}
+    .myfooter li {
+                color:#eee;
+         }
+    .myfooter a,p {
+    color:#e7e7e7;
+    }
+
+.subfooter {
+    background-color:#761616  ;
+        padding-top:10px;
+        color:#eee;
+        padding-bottom:10px;
+        margin-bottom:0px;
+}
+.myfooter h3, ul, p {
+
+   list-style-type:none;
+
+}
+h2 {
+    text-align:right;
+}
+p {
+    text-align: right;
+}
+
+#searchName {
+    width: 130px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding: 12px 20px 12px 12px;
+    transition:width 0.4s ease-in-out;
+}
+
+#searchName :focus {
+    width:100%;
+}
+
+.ui-datepicker {
+    font-size: 14px;
+}
+
+@media(min-width: 992px){
+    .col-md-3{
+        width:23%;
+    }
+}

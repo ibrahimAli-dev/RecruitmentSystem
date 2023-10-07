@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WazefaOn.Models.Job>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div class="panel panel-default style="padding:15px;">
+        <h2 class="panel-heading">Search Results</h2>
+
+        <div class="row">
+
+            @foreach (var subItem in Model)
+            {
+                <div class="col-md-3 thumbnail" style="margin-left:20px" ;margin-bottom:30px;height:380px;">
+                    <h3>@Html.DisplayFor(modelItem => subItem.JobTitle)</h3>
+                    <h5>@Html.DisplayFor(modelItem => subItem.jobContent)</h5>
+                    @Html.ActionLink("Details", "Details", new { jobId = subItem.Id }, new { @class = "btn btn-primary" });
+                </div>
+            }
+        </div>
+    </div>

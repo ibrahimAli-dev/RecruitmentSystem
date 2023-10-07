@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="~/Home" style=" float: left; color: white;">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Main Page
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/About" style=" float: left; color: white;" >
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/Contact" style=" float: left; color: white;">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            Call us
+                        </a>
+                    </li>
+                    <li>
+                        @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                        {
+                            <input type="text" name="searchName" id="searchName"
+                                   placeholder="search here.."  />
+                        }
+                    </li>
+
+                </ul>
+                @Html.Partial("_Login");
+                @*PArtial View Login*@
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row" style="margin-bottom:250px;">
+            @RenderBody()
+        </div>
+    </div>
+   <footer class="myfooter navbar-fixed-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>
+                            Who We Are <i class="glyphicon glyphicon-question-sign"></i>
+                        </h3>
+                        <p>
+                            Welcome Our visitors to your best site for many Jobs 
+                        </p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-globe"></i>
+                            importnat links
+                        </h3>
+                        <ul>
+                            <li><a href="#">General Jobs</a></li>
+                            <li><a href="#">Private jobs</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </h3>
+                        <ul>
+                            <li><a href="#">FaceBook</a></li>
+                            <li><a href="#">Youtube </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="subfooter">
+                <center><span>All rights reseved for Wazifa site 2023 </span></center>
+            </div>
+        </footer>
+
+    @*<script src="~/Scripts/jquery-3.3.1.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+            crossorigin="anonymous"></script>
+    
+
+</body>
+</html>

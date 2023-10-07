@@ -1,0 +1,46 @@
+﻿@model WazefaOn.Models.Job
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.JobContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.JobContent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.JobTitle)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Apply to Job", "Apply", new { id = Model.Id }, new { @class = "btn btn-primary" }) 
+    @Html.ActionLink("Back to Main", "Index", new { @class = "btn btn-success" })
+</p>

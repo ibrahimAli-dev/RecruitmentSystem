@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WazefaOn.Models.JobsViewModel>
+
+@foreach (var gr in Model)
+{
+   <h3> @gr.JobTitle</h3>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                Applicant Name
+            </th>
+
+            <th>
+                Message Details 
+            </th>
+            <th>
+                Applying Date
+            </th>
+        </tr>
+        @foreach(var item in gr.Items)
+        {
+            <tr>
+                <td>
+                    @item.user.UserName
+                </td>
+                <td>
+                    @item.Message
+                </td>
+                <td>
+                    @item.ApplyDate
+                </td>
+
+            </tr>
+
+        }
+
+    </table>
+}
